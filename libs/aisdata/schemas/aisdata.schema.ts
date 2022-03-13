@@ -32,9 +32,11 @@ export class Aisdata {
   @Prop({ required: true })
   COG: string;
 
+  // TODO: This should not depend on env variable. Use contructor?
   @Prop({
     default: Date.now,
     expires: 60 * 60 * 24 * parseInt(process.env.AIS_DATA_STORED_IN_DAYS),
+    immutable: true,
   })
   createdAt: Date;
 }

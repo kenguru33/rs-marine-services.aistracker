@@ -1,5 +1,5 @@
 export class createAisdataDto {
-  mmsi: string;
+  MMSI: string;
   Ship_name: string;
   Latitude: string;
   Longitude: string;

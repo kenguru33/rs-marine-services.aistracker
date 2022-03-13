@@ -10,6 +10,17 @@ export class AisdataService {
   ) {}
 
   async create(createAisDto: createAisdataDto): Promise<Aisdata> {
-    return 
+    const aisdata = await this.aisdataModel.create({
+      ...createAisDto,
+    });
+    try {
+      const result = await aisdata.save();
+      return result;
+    } catch (err) {
+      if (err === '11000') {
+        console.log('dups');
+      }
+      throw err;
+    }
   }
 }
