@@ -9,7 +9,8 @@ export class AisdataService {
     @InjectModel(Aisdata.name) private aisdataModel: Model<AisDataDocument>,
   ) {}
 
-  async create(createAisDto: createAisdataDto): Promise<Aisdata> {
+  async add(createAisDto: createAisdataDto): Promise<Aisdata> {
+    
     const aisdata = await this.aisdataModel.create({
       ...createAisDto,
     });

@@ -7,6 +7,6 @@ import { Aisdata, AisdataSchema } from './schemas/aisdata.schema';
   imports: [
     MongooseModule.forFeature([{ name: Aisdata.name, schema: AisdataSchema }]),
   ],
-  providers: [AisdataService],
+  providers: [AisdataService, ],
 })
 export class AppModule {}
