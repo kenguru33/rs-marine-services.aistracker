@@ -5,5 +5,6 @@ import { HttpModule } from '@nestjs/axios';
 @Module({
   imports: [HttpModule],
   providers: [KystverketService],
+  exports: [KystverketService, HttpModule],
 })
-export class AppModule {}
+export class KystverketModule {}

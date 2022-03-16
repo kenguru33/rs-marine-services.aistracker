@@ -77,4 +77,3 @@ export class Aisdata {
 export const AisdataSchema = SchemaFactory.createForClass(Aisdata);
 // Do not allow duplicate postions
 AisdataSchema.index({ MMSI: 1, Time_stamp: 1 }, { unique: true });
-
